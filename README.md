@@ -1,6 +1,6 @@
 # TechBlog
 
-- The URL of the functional, deployed application:
+- The URL of the functional, deployed, mobile responsive application:
 - https://techblog2020.herokuapp.com/
 
 ## Table of Contents
