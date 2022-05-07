@@ -1,21 +1,39 @@
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">Username:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-    <button class="btn btn-primary" type="submit">Login instead</button>
-  </div>
-</div>
+<div class="container justify-content-center">
+  {{! <section class="col-12 col-lg-8"> }}
+  <div class="row col-12 col-lg-8">
+    <div class="login-card">
 
-<script src="./js/signup.js"></script>
+      <h2 class="page-title">Sign up</h2>
+      <form class="form login-form" action="" id="signup">
+
+        <div class="form-group">
+          <label for="name-login">Username:</label>
+          <input
+            class="form-input"
+            placeholder="username"
+            type="text"
+            id="signupUsername"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password-login">Password:</label>
+          <input
+            class="form-input"
+            type="password"
+            placeholder="password"
+            id="signupPassword"
+          />
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Signup!</button>
+        </div>
+
+      </form>
+      <a href="/login" class="btn btn-primary">Login instead</a>
+    </div>
+    <script src="/js/signup.js"></script>
+  </div>
+  {{! </section> }}
+</div>

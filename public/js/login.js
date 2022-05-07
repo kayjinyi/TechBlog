@@ -1,25 +1,22 @@
 console.log("login linked1");
-const loginFormHandler = async (event) => {
-  event.preventDefault();
-
-  const name = document.querySelector("#name-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
-
-  if (name && password) {
-    const response = await fetch("/api/users/login", {
-      method: "POST",
-      body: JSON.stringify({ name, password }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      document.location.replace("/"); //replace location or console.log("logedin")
+document.querySelector("#login").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const userObj = {
+    username: document.querySelector("#loginUsername").value,
+    password: document.querySelector("#loginPassword").value,
+  };
+  console.log(userObj);
+  fetch("/api/users/login", {
+    method: "POST",
+    body: JSON.stringify(userObj),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((res) => {
+    if (res.ok) {
+      location.href = "/dashboard";
     } else {
-      alert("Failed to log in.");
+      alert("trumpet sound");
     }
-  }
-};
-
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+  });
+});

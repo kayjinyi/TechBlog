@@ -1,8 +1,8 @@
 :root {
-  --primary: #3d5852;
+  --primary: #44cb7c;
   --secondary: #86938f;
   --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
+  --quatrinary: white;
   --light: #e3e4e3;
   --dark: #182c23;
   --error: rgb(228, 46, 1);
@@ -29,10 +29,10 @@ a:visited {
 }
 
 header {
-  padding: 40px;
-  text-align: center;
-  background: var(--primary);
+  padding: 50px;
+  background: green;
   color: var(--light);
+  justify-content: space;
 }
 
 main {
@@ -79,17 +79,12 @@ nav a:hover {
 .btn-no-style {
   background: none;
   border: none;
-  padding: 0;
+  padding: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 100%;
   transition: color 0.1s;
-  margin-left: 16px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+  margin-left: 20px;
 }
 
 .painting {
@@ -116,15 +111,14 @@ img {
 }
 
 .login-card {
-  margin: 0 0 20px 0;
-  flex: 0 0 50%;
-  max-width: 50%;
+  text-align: center;
+  margin: 20px 20px 50px 20px;
   padding: 5px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: var(--primary);
   color: var(--light);
 }
 
@@ -133,7 +127,7 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  background-color: var(--tertiary);
+  background-color: green;
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }

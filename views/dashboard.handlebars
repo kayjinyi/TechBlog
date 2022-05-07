@@ -1,0 +1,40 @@
+<div class="container justify-content-center">
+  {{! <section class="col-12 col-lg-8"> }}
+  <div class="row col-12 col-lg-10">
+    <div class="login-card">
+
+      <h2 class="page-title">Your blogs</h2>
+      <form class="form login-form" action="" id="newBlog">
+
+        <div class="form-group">
+          <label for="name-login">Title:</label>
+          <input
+            class="form-input"
+            placeholder="title"
+            type="text"
+            id="title"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="">Content</label>
+          <textarea class="form-input" id="body" cols="30" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+
+    </div>
+    <script src="/js/signup.js"></script>
+  </div>
+</div>
+<div class="container justify-content-center">
+  {{#each Blogs}}
+    <h3>{{title}}</h3>
+    <p>{{body}}</p>
+    <button>delete</button>
+    <hr />
+  {{/each}}
+</div>

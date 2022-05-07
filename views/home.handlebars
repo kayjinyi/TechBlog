@@ -1,0 +1,12 @@
+<section class="container">
+  <div class="card">
+    {{#each blogs}}
+      <a href="/api/blogs/{{id}}">
+        <h5 class="card-header bg-green">{{title}}</h5></a>
+      <p>Posted by</p>
+      <div class="card-body">
+        <p class="card-text">{{body}}</p>
+      </div>
+    {{/each}}
+  </div>
+</section>
