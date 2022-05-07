@@ -26,12 +26,12 @@
     <header class="container-fluid">
       <a class="btn-no-style" href="/">Home</a>
       {{#if loggedIn}}
-        <a href="/dashboard" class="btn-no-style">Dashboard</a>
+        <a href="/dashboard" class="shadowbox text-green">Dashboard</a>
         <a href="/api/users/logout" class="btn-no-style">logout</a>
         <h2>Your dashboard</h2>
       {{else}}
         <a href="/login">login</a>
-        <h2>The Tech blog</h2>
+        <h2 class="shadowbox text-green">The Tech blog</h2>
       {{/if}}
     </header>
     <main>

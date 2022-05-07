@@ -30,8 +30,8 @@ const blogs = [
     date_created: "May 05, 2017",
   },
   {
-    title: "Cats: a review",
-    body: "I love cats I love every kind of cat.  I want to hug all them but you cant. Cant hug every cat......Cant hug every cat. ",
+    title: "Object-Relational Mapping",
+    body: "I have really loved learing about ORMs. It's really simplified the way I create queries in SQL ",
     UserId: 2,
     date_created: "May 05, 2017",
   },
@@ -40,7 +40,7 @@ const comments = [
   {
     description:
       "MVC is important to understand because it is the basic structure which most web applications are built on. The same is also true for mobile apps and desktop programs.",
-    date_created: "May 05, 2017",
+    date_created: "May 06, 2022",
     user_created: "jinyi1",
     blog_id: 1,
   },

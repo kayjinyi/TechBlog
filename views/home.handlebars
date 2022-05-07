@@ -3,8 +3,9 @@
     {{#each blogs}}
       <a href="/api/blogs/{{id}}">
         <h5 class="card-header bg-green">{{title}}
-          created on{{date_created}}</h5></a>
-      <p>Posted by</p>
+          created on
+          {{date_created}}</h5></a>
+      {{! <p>Posted by</p> }}
       <div class="card-body">
         <p class="card-text">{{body}}</p>
       </div>

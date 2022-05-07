@@ -97,7 +97,11 @@ Use the [express-session](https://www.npmjs.com/package/express-session) package
 
 The following images show the web application's appearance and functionality:
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif)<br>
+![Homepage.](./Assets/home.png)<br>
+![signing into the app](./Assets/login.png)<br>
+![sign up.](./Assets/signup.png)<br>
+![blog posts.](./Assets/post%20blog.png)<br>
+![comments.](./Assets/comment.png)<br>
 
 ---
 

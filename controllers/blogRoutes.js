@@ -45,7 +45,6 @@ router.post("/", (req, res) => {
     title: req.body.title,
     body: req.body.body,
     UserId: req.session.user.id,
-    date_created: req.session.date_created,
   })
     .then((newBlog) => {
       res.json(newBlog);
