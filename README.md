@@ -1,7 +1,7 @@
 # TechBlog
 
 - The URL of the functional, deployed application:
-- https://pure-caverns-20602.herokuapp.com/
+- https://techblog2020.herokuapp.com/
 
 ## Table of Contents
 
