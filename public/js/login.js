@@ -1,3 +1,4 @@
+console.log("login linked1");
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -12,30 +13,9 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/"); //replace location or console.log("logedin")
     } else {
       alert("Failed to log in.");
-    }
-  }
-};
-
-const signupFormHandler = async (event) => {
-  event.preventDefault();
-
-  const name = document.querySelector("#name-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
-
-  if (name && password) {
-    const response = await fetch("/api/users", {
-      method: "POST",
-      body: JSON.stringify({ name, password }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to sign up.");
     }
   }
 };
@@ -43,7 +23,3 @@ const signupFormHandler = async (event) => {
 document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
-
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);

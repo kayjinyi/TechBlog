@@ -4,11 +4,10 @@ const Comment = require("../models/Comment");
 
 // route to get all blogs
 router.get("/", async (req, res) => {
-  const dishData = await Blog.findAll().catch((err) => {
-    res.json(err);
+  Blog.findAll().then((blogData) => {
+    const blogs = blogData.map((blog) => blog.get({ plain: true }));
+    res.render("homepage", { blogs });
   });
-  const blogs = blogData.map((blog) => blog.get({ plain: true }));
-  res.render("all", { blogs });
 });
 
 // route to get one blog

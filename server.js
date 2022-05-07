@@ -20,12 +20,22 @@ const sess = {
   }),
 };
 
-app.use(session(sess));
+const hbs = exphbs.create({});
+
+// Inform Express.js which template engine we're using
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
+
+// Static directory
+app.use(express.static("public"));
+
+app.use(session(sess));
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
