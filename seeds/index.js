@@ -21,21 +21,25 @@ const blogs = [
     title: "Why MVC is so important",
     body: "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer of data, the View layer for design ,a dn the controller layer for application logic",
     UserId: 1,
+    date_created: "May 05, 2017",
   },
   {
     title: "Authentication vs Authorization",
     body: "There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.",
     UserId: 1,
+    date_created: "May 05, 2017",
   },
   {
     title: "Cats: a review",
     body: "I love cats I love every kind of cat.  I want to hug all them but you cant. Cant hug every cat......Cant hug every cat. ",
     UserId: 2,
+    date_created: "May 05, 2017",
   },
 ];
 const comments = [
   {
-    description: "so important",
+    description:
+      "MVC is important to understand because it is the basic structure which most web applications are built on. The same is also true for mobile apps and desktop programs.",
     date_created: "May 05, 2017",
     user_created: "jinyi1",
     blog_id: 1,
