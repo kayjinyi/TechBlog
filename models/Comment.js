@@ -20,6 +20,7 @@ Comment.init(
     },
     user_created: {
       type: DataTypes.STRING, //get login username
+      defaultValue: "anoynemous",
     },
     blog_id: {
       type: DataTypes.INTEGER,

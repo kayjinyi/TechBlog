@@ -43,6 +43,7 @@ const comments = [
     date_created: "May 06, 2022",
     user_created: "jinyi1",
     blog_id: 1,
+    UserId: 1,
   },
 ];
 const feedMe = async () => {

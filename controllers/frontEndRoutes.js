@@ -46,4 +46,24 @@ router.get("/dashboard", (req, res) => {
   });
 });
 
+router.get("/aftercomment", (req, res) => {
+  Blog.findByPk(req.params.id, {
+    include: [
+      {
+        model: Comment,
+        attributes: ["id", "description", "date_created", "user_created"],
+      },
+    ],
+  })
+    .then((dbBlog) => {
+      console.log(dbBlog);
+      const blog = dbBlog.get({ plain: true });
+      res.render("blog", { blog });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
+});
+
 module.exports = router;

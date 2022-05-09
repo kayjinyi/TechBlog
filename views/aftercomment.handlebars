@@ -1,0 +1,8 @@
+
+<section class="container-fluid">
+  <h1>What else Comments</h1>
+  <h3>{{blog.title}}</h3>
+    {{#each blog.comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+</section>

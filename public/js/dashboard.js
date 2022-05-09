@@ -2,8 +2,8 @@ console.log("hello");
 document.querySelector("#newBlog").addEventListener("submit", (e) => {
   e.preventDefault();
   const blogObj = {
-    title: document.querySelector("#title").value,
-    body: document.querySelector("#body").value,
+    title: document.querySelector("#title").value.trim(),
+    body: document.querySelector("#body").value.trim(),
   };
   fetch("/api/blogs", {
     method: "POST",

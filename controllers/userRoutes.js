@@ -41,6 +41,7 @@ router.post("/signup", (req, res) => {
         id: newUser.id,
         username: newUser.username,
       };
+      console.log(req.session.user);
       res.json(newUser);
     })
     .catch((err) => {

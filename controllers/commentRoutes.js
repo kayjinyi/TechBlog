@@ -10,10 +10,12 @@ router.post("/", (req, res) => {
   }
   Comment.create({
     ...req.body,
+    blog_id: req.session,
     UserId: req.session.user.id,
   })
     .then((newComment) => {
       res.json(newComment);
+      return res.redirect("/aftercomment");
     })
     .catch((err) => {
       console.log(err);

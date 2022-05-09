@@ -1,15 +1,15 @@
 console.log("login linked1");
 
-document.querySelector("#signup").addEventListener("submit", (e) => {
+document.querySelector("#newComment").addEventListener("submit", (e) => {
   e.preventDefault();
-  const userObj = {
-    username: document.querySelector("#signupUsername").value,
-    password: document.querySelector("#signupPassword").value,
+  const commentObj = {
+    description: document.querySelector("#commentbody").value.trim(),
+    blog_id: blog.id,
   };
-  console.log(userObj);
-  fetch("/api/users/signup", {
+  console.log(commentObj);
+  fetch("/api/comments", {
     method: "POST",
-    body: JSON.stringify(userObj),
+    body: JSON.stringify(commentObj),
     headers: {
       "Content-Type": "application/json",
     },

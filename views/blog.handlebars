@@ -1,7 +1,31 @@
 <section class="container-fluid">
   <h1>Comment Page</h1>
   <h3>{{blog.title}}</h3>
-    {{#each blog.comments as |comment|}}
-    {{> comment-details}}
-    {{/each}}
+  <p>{{blog.body}}</p>
+
 </section>
+<div class="container justify-content-center">
+  {{! <section class="col-12 col-lg-8"> }}
+  <div class="row col-12 col-lg-10">
+    <div class="login-card">
+      <h2 class="page-title">Comment </h2>
+      <form class="form login-form" action="" id="newComment">
+
+        <div class="form-group">
+          <textarea
+            class="form-input"
+            id="commentBody"
+            cols="30"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="/js/comment.js"></script>

@@ -30,11 +30,12 @@
   </div>
 </div>
 <div class="container justify-content-center">
-  {{#each Blogs}}
-    <h3>{{title}}</h3>
-    <p>{{body}}</p>
+  <h1>Past blog</h1>
+    {{#each user.blogs as |blog|}}
+    {{> dashboard-details}}
+    {{/each}}
     <button>delete</button>
     <hr />
-  {{/each}}
+
 </div>
-<script src="/js/signup.js"></script>
+<script src="/js/dashboard.js"></script>
