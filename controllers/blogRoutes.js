@@ -44,7 +44,7 @@ router.post("/", (req, res) => {
   Blog.create({
     title: req.body.title,
     body: req.body.body,
-    UserId: req.session.user.id,
+    user_id: req.session.user.id,
   })
     .then((newBlog) => {
       res.json(newBlog);

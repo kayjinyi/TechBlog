@@ -4,7 +4,7 @@ const { User, Blog } = require("../models");
 
 router.get("/", (req, res) => {
   Blog.findAll().then((blogs) => {
-    console.log(blogs);
+    //console.log(blogs);
     const hbsBlogs = blogs.map((blog) => blog.get({ plain: true }));
     console.log("==========");
     console.log(hbsBlogs);
@@ -35,14 +35,14 @@ router.get("/dashboard", (req, res) => {
     return res.redirect("/login");
   }
   User.findByPk(req.session.user.id, {
-    include: [Blog],
+    include: [{ model: Blog }],
   }).then((userData) => {
-    console.log(userData);
+    //console.log(userData);
     const hbsData = userData.get({ plain: true });
     console.log("=======");
     console.log(hbsData);
     hbsData.loggedIn = req.session.user ? true : false;
-    res.render("dashboard", hbsData);
+    res.render("dashboard", { user: hbsData });
   });
 });
 

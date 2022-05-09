@@ -37,12 +37,15 @@ router.post("/signup", (req, res) => {
   User.create(req.body)
     .then((newUser) => {
       console.log(newUser);
+      //req.session.save(() => {
       req.session.user = {
         id: newUser.id,
         username: newUser.username,
       };
+
       console.log(req.session.user);
       res.json(newUser);
+      //})
     })
     .catch((err) => {
       console.log(err);
