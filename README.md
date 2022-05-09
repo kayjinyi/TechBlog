@@ -1,7 +1,7 @@
 # TechBlog
 
 - The URL of the functional, deployed, mobile responsive application:
-- https://techblog2020.herokuapp.com/
+- https://gentle-hollows-22810.herokuapp.com/
 
 ## Table of Contents
 
