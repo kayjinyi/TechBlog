@@ -96,12 +96,12 @@ Use the [express-session](https://www.npmjs.com/package/express-session) package
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
-
 ![Homepage.](./Assets/home.png)<br>
 ![signing into the app](./Assets/login.png)<br>
 ![sign up.](./Assets/signup.png)<br>
-![blog posts.](./Assets/post%20blog.png)<br>
+![blog posts.](./Assets/blog.png)<br>
 ![comments.](./Assets/comment.png)<br>
+![After comments.](./Assets/aftercomment.png)<br>
 
 ---
 
