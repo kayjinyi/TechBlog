@@ -19,13 +19,14 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "description", "date_created", "user_created"],
+        //attributes: ["id", "description", "date_created", "user_created"],
       },
     ],
   })
     .then((dbBlog) => {
-      console.log(dbBlog);
+      //console.log(dbBlog);
       const blog = dbBlog.get({ plain: true });
+      console.log(blog);
       res.render("blog", { blog });
     })
     .catch((err) => {
@@ -47,8 +48,8 @@ router.post("/", (req, res) => {
     user_id: req.session.user.id,
   })
     .then((newBlog) => {
-      res.json(newBlog);
       console.log(newBlog);
+      res.json(newBlog);
     })
     .catch((err) => {
       console.log(err);

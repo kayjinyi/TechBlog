@@ -41,8 +41,8 @@ router.get("/dashboard", (req, res) => {
     const hbsData = userData.get({ plain: true });
     console.log("=======");
     console.log(hbsData);
-    hbsData.loggedIn = req.session.user ? true : false;
-    res.render("dashboard", { user: hbsData });
+    const loggedIn = req.session.user ? true : false;
+    res.render("dashboard", { user: hbsData, loggedIn });
   });
 });
 
@@ -51,7 +51,7 @@ router.get("/aftercomment", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "description", "date_created", "user_created"],
+        //attributes: ["id", "description", "date_created", "user_created"],
       },
     ],
   })

@@ -18,9 +18,12 @@ Comment.init(
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
     },
-    user_created: {
-      type: DataTypes.STRING, //get login username
-      defaultValue: "anoynemous",
+    user_id: {
+      type: DataTypes.INTEGER, //get login username
+      references: {
+        model: "user",
+        key: "id",
+      },
     },
     blog_id: {
       type: DataTypes.INTEGER,
