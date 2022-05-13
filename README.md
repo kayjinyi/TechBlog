@@ -75,7 +75,7 @@ THEN the developers are able to view comments but the developers are prompted to
 
 ## Installation
 
-This application’s folder structure must follow the Model-View-Controller paradigm.
+This application’s folder structure follow the Model-View-Controller paradigm.
 
 Use the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for Views
 
