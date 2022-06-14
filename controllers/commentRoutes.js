@@ -10,12 +10,12 @@ router.post("/", (req, res) => {
   }
   Comment.create({
     ...req.body,
-    blog_id: req.session,
+    // blog_id: blog_id,
     user_id: req.session.user.id,
   })
     .then((newComment) => {
       res.json(newComment);
-      return res.redirect("/aftercomment");
+      // return res.redirect("/aftercomment");
     })
     .catch((err) => {
       console.log(err);
@@ -23,41 +23,41 @@ router.post("/", (req, res) => {
     });
 });
 
-// //delete Comment
-// router.delete("/:id", async (req, res) => {
-//   try {
-//     const commentData = await Comment.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
+//delete Comment
+router.delete("/:id", async (req, res) => {
+  try {
+    const commentData = await Comment.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
 
-//     if (!commentData) {
-//       res.status(404).json({ message: "No comment found with this id!" });
-//       return;
-//     }
+    if (!commentData) {
+      res.status(404).json({ message: "No comment found with this id!" });
+      return;
+    }
 
-//     res.status(200).json(commentData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.status(200).json(commentData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-// //update Comment
-// router.put("/:id", (req, res) => {
-//   Comment.update(req.body, {
-//     where: {
-//       id: req.params.id,
-//     },
-//   })
-//     .then((updatedComment) => {
-//       res.json(updatedComment);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json({ msg: "an error occured", err });
-//     });
-// });
+//update Comment
+router.put("/:id", (req, res) => {
+  Comment.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((updatedComment) => {
+      res.json(updatedComment);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
+});
 
 module.exports = router;

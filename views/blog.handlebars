@@ -3,6 +3,11 @@
   <h3>{{blog.title}}</h3>
   <p>{{blog.body}}</p>
 
+  <div>
+    {{#each blog.comments}}
+      <p>{{description}}</p>
+    {{/each}}
+  </div>
 </section>
 <div class="container justify-content-center">
   {{! <section class="col-12 col-lg-8"> }}
